@@ -12,7 +12,7 @@ class DefinaSpider(scrapy.Spider):
     start_urls = ['https://market.theforce.trade/v2/sellorder/new_arrivals']
 
     def parse(self, response):
-        # xpath .body不全含有css，以后 再改
+        # xpath .body不全含有css，以后再改
         # with open('defina.html', 'wb') as f:
         #     f.write(response.body)
 
@@ -25,7 +25,8 @@ class DefinaSpider(scrapy.Spider):
             # 获取最后的价格
             last_price = data['last_sale'][0:-18]
             if name == 'HeroBox':
-                print('卡片类型 Box   价格：' + last_price)
+                pass
+                #print('卡片类型 Box   价格：' + last_price)
                 # if int(last_price) <= 300:
                 #     print('盲盒价格较低')
             else:
