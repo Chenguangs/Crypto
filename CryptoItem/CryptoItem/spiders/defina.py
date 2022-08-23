@@ -12,7 +12,7 @@ class DefinaSpider(scrapy.Spider):
     start_urls = ['https://market.theforce.trade/v2/sellorder/new_arrivals']
 
     def parse(self, response):
-        # xpath .body不全含有css
+        # xpath .body不全含有css，以后再改
         # with open('defina.html', 'wb') as f:
         #     f.write(response.body)
 
